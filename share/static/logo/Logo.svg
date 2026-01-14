@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #861cff;
+      }
+
+      .cls-2 {
+        fill: #ffac36;
+      }
+
+      .cls-3 {
+        fill: #00b6b6;
+      }
+
+      .cls-4 {
+        fill: #e85053;
+      }
+    </style>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard 1">
+    <g>
+      <path id="Rounded_Rectangle_2" data-name="Rounded Rectangle 2" class="cls-1" d="M50,30H60a0,0,0,0,1,0,0V40A10,10,0,0,1,50,50H40a0,0,0,0,1,0,0V40A10,10,0,0,1,50,30Z"/>
+      <path class="cls-2" d="M40,50H50A10,10,0,0,1,60,60V70a0,0,0,0,1,0,0H50A10,10,0,0,1,40,60V50A0,0,0,0,1,40,50Z"/>
+      <path id="Rectangle_1_copy" data-name="Rectangle 1 copy" class="cls-3" d="M50,70H60a0,0,0,0,1,0,0V80A10,10,0,0,1,50,90H40a0,0,0,0,1,0,0V80A10,10,0,0,1,50,70Z"/>
+      <path id="Rectangle_1_copy_2" data-name="Rectangle 1 copy 2" class="cls-4" d="M60,70H70A10,10,0,0,1,80,80V90a0,0,0,0,1,0,0H70A10,10,0,0,1,60,80V70A0,0,0,0,1,60,70Z"/>
+    </g>
+  </g>
+</svg>

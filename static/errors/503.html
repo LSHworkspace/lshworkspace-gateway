@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSHworkspace - Service Temporarily Unavailable</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            padding: 48px 40px;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+            position: relative;
+            border: 1px solid #2d2d2d;
+        }
+        
+        .status-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        
+        .status-code {
+            font-size: 72px;
+            font-weight: 700;
+            color: #e0e0e0;
+            margin-right: 20px;
+            line-height: 1;
+        }
+        
+        .status-divider {
+            width: 1px;
+            height: 60px;
+            background-color: #444;
+            margin: 0 20px;
+        }
+        
+        .status-text {
+            font-size: 18px;
+            font-weight: 500;
+            color: #9e9e9e;
+            text-align: left;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            color: #f5f5f5;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #9e9e9e;
+            margin-bottom: 24px;
+        }
+        
+        .loading-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .pulse {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #757575;
+            margin: 0 6px;
+        }
+        
+        .pulse:nth-child(1) {
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+        
+        .pulse:nth-child(2) {
+            animation: pulse 1.5s infinite ease-in-out 0.3s;
+        }
+        
+        .pulse:nth-child(3) {
+            animation: pulse 1.5s infinite ease-in-out 0.6s;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(0.8);
+                background-color: #616161;
+            }
+            50% {
+                transform: scale(1.2);
+                background-color: #bbbbbb;
+            }
+        }
+        
+        .retry-info {
+            margin: 30px 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            color: #9e9e9e;
+        }
+        
+        .countdown {
+            background-color: #333;
+            border-radius: 4px;
+            padding: 4px 10px;
+            margin: 0 6px;
+            font-weight: 600;
+            color: #e0e0e0;
+            min-width: 40px;
+            display: inline-block;
+        }
+        
+        .refresh-btn {
+            display: inline-block;
+            background-color: #333333;
+            color: #f5f5f5;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            border: 1px solid #444444;
+        }
+        
+        .refresh-btn:hover {
+            background-color: #444444;
+            border-color: #555555;
+            transform: translateY(-2px);
+        }
+        
+        .contact {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #757575;
+            border-top: 1px solid #2d2d2d;
+            padding-top: 20px;
+        }
+        
+        .contact a {
+            color: #bbbbbb;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .contact a:hover {
+            color: #ffffff;
+        }
+        
+        .contact a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #bbbbbb;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact a:hover::after {
+            transform: scaleX(1);
+        }
+        
+        @media (max-width: 580px) {
+            .container {
+                padding: 36px 24px;
+            }
+            
+            .status-info {
+                flex-direction: column;
+                margin-bottom: 24px;
+            }
+            
+            .status-code {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .status-divider {
+                display: none;
+            }
+            
+            .status-text {
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="status-info">
+            <div class="status-code">503</div>
+            <div class="status-divider"></div>
+            <div class="status-text">Service<br>Temporarily<br>Unavailable</div>
+        </div>
+        
+        <h1>We'll be back shortly</h1>
+        <p>Our system is currently undergoing scheduled maintenance or experiencing high traffic. Our team is working to restore access as quickly as possible.</p>
+        
+        <div class="loading-indicator">
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+        </div>
+        
+        <div class="retry-info">
+            Attempting to reconnect in <span class="countdown" id="countdown">10</span> seconds
+        </div>
+        
+        <a href="javascript:window.location.reload()" class="refresh-btn" id="retry-button">Try Now</a>
+        
+        <div class="contact">
+            <p>Need assistance? Contact us at <a href="mailto:contact@lshworkspace.com">contact@lshworkspace.com</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-refresh functionality
+        let countdown = 10;
+        const countdownElement = document.getElementById('countdown');
+        const retryButton = document.getElementById('retry-button');
+        
+        // Function to check if the server is back online
+        function checkServerStatus() {
+            return fetch(window.location.href, { 
+                method: 'HEAD',
+                cache: 'no-store',
+                headers: {
+                    'Pragma': 'no-cache',
+                    'Cache-Control': 'no-cache'
+                }
+            })
+            .then(response => {
+                // If the response status is not 503, the server is likely back online
+                if (response.status !== 503) {
+                    window.location.reload();
+                    return true;
+                }
+                return false;
+            })
+            .catch(() => {
+                // If there's an error fetching, the server is still down
+                return false;
+            });
+        }
+        
+        // Function to update countdown
+        function updateCountdown() {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                // Reset countdown and check server status
+                countdown = 10;
+                checkServerStatus().then(isOnline => {
+                    if (!isOnline) {
+                        // If still offline, restart the countdown
+                        countdownElement.textContent = countdown;
+                    }
+                });
+            }
+        }
+        
+        // Start the countdown
+        const intervalId = setInterval(updateCountdown, 1000);
+        
+        // Check server status every 10 seconds
+        const statusCheckId = setInterval(() => {
+            checkServerStatus();
+        }, 10000);
+        
+        // Check server status when retry button is clicked
+        retryButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            countdown = 10;
+            countdownElement.textContent = countdown;
+            checkServerStatus();
+        });
+        
+        // Initial check when the page loads
+        setTimeout(() => {
+            checkServerStatus();
+        }, 1000);
+    </script>
+</body>
+</html>
